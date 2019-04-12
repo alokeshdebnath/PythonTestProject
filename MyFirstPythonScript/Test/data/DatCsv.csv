@@ -1,2 +1,2 @@
-FirstName,LastName,phone,Email,Country,UserName,signOnPassword,signOnConfirmPassword
-Alokesh,Debnath,23232323,alokesh.d@test.com,INDIA,a1,123,123
+FirstName,LastName,phone,Email,Address1,Address2,City,PostalCode,State,Country,UserName,signOnPassword,signOnConfirmPassword
+Alokesh,Debnath,24232221,alokesh.debnath@test.com,First Line,Second Line,Kolkata,700091,West Bengal,INDIA,alokesh.debnath,123,123

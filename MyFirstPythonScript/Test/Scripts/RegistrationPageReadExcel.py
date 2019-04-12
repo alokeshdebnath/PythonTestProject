@@ -11,8 +11,10 @@ from MyFirstPythonScript.Test.TestBase.EnvironmentsetUp import EnvironmentSetUp
 from time import sleep
 from selenium.common.exceptions import TimeoutException
 from datetime import datetime
-from ddt import ddt, data, unpack
+
 from MyFirstPythonScript.Test.Library.GetData import get_csv_data
+from ddt import ddt, data, unpack
+#from selenium import webdriver
 #import email
 
 @ddt
@@ -21,8 +23,7 @@ class Registration(EnvironmentSetUp):
     
     @data(*get_csv_data("C:/Users/Datacore/eclipse-workspace/PyDevProject/MyFirstPythonScript/Test/data/DatCsv.csv"))
     @unpack
-    def test_RegistrationFlow(self, FName, LName, phone, Email, 
-                            Country, UserName, signOnPassword, signOnConfirmPassword):
+    def test_RegistrationFlow(self, FName, LName, phone, Email, Add1, Add2, city, pcode, state, Country, UserName, signOnPassword, signOnConfirmPassword):
         
 
         ss_path ="\\MercuryTour_"
@@ -61,6 +62,11 @@ class Registration(EnvironmentSetUp):
             reg.getLastName(LName)
             reg.getPhone(phone)
             reg.getEmail(Email)
+            reg.getadd1(Add1)
+            reg.getadd2(Add2)
+            reg.getcity(city)
+            reg.getstate(state)
+            reg.getpcode(pcode)
             reg.getCountry(Country)
             reg.getUserName(UserName)
             reg.getPassword(signOnPassword)

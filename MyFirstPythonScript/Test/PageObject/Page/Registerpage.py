@@ -5,9 +5,9 @@ Created on Jun 20, 2018
 '''
 import unittest
 from MyFirstPythonScript.Test.PageObject.Locators import Locator
-from selenium.webdriver.support.select import Select
+#from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.select import By
-#from driver import driver
+
 
 class Register(object):
 
@@ -20,6 +20,13 @@ class Register(object):
         self.LastName = self.driver.find_element(By.XPATH, Locator.lastName)
         self.phone = self.driver.find_element(By.XPATH, Locator.phone)
         self.Email = self.driver.find_element(By.XPATH, Locator.email)
+        
+        self.regisadd1 = self.driver.find_element(By.XPATH, Locator.regisadd1)
+        self.regisadd2 = self.driver.find_element(By.XPATH, Locator.regisadd2)
+        self.regiscity = self.driver.find_element(By.XPATH, Locator.regiscity)
+        self.regisstate = self.driver.find_element(By.XPATH, Locator.regisstate)
+        self.regispcode = self.driver.find_element(By.XPATH, Locator.regispostalcode)
+        
         self.Country = self.driver.find_element(By.XPATH, Locator.country)
         self.UserName = self.driver.find_element(By.XPATH, Locator.userName)                                                                                 
         self.signOnPassword = self.driver.find_element(By.XPATH, Locator.password)
@@ -39,6 +46,21 @@ class Register(object):
     
     def getEmail(self,Email):
         self.Email.send_keys(Email)    
+        
+    def getadd1(self,Add1):
+        self.regisadd1.send_keys(Add1)   
+        
+    def getadd2(self,Add2):
+        self.regisadd2.send_keys(Add2)
+        
+    def getcity(self,city):
+        self.regiscity.send_keys(city)
+        
+    def getstate(self,state):
+        self.regisstate.send_keys(state)
+        
+    def getpcode(self,pcode):
+        self.regispcode.send_keys(pcode)        
         
     def getCountry(self,Country):
         self.Country.send_keys(Country)

@@ -17,6 +17,15 @@ class Locator(object):
     regis_text = "//*[contains(text(),'basic information')]"
     firstName = "//input[@name='firstName']"
     lastName = "//input[@name='lastName']"
+    
+    regisadd1 ="//input[@name='address1']"
+    regisadd2 ="//input[@name='address2']"
+    regiscity ="//input[@name='city']"
+    regisstate ="//input[@name='state']"
+    regispostalcode ="//input[@name='postalCode']"
+    
+    
+    
     phone = "//input[@name='phone']"
     email = "//input[@name='userName']"
     country = "//select[@name='country']"
