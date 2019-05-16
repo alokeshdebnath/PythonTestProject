@@ -1,0 +1,1 @@
+C:\Users\Datacore\eclipse-workspace\PyDevProject\MyFirstPythonScript>nosetests C:\Users\Datacore\eclipse-workspace\PyDevProj_Registrationpage.py
