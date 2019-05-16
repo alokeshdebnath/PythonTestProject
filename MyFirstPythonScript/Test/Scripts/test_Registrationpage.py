@@ -30,7 +30,7 @@ class Registration(EnvironmentSetUp):
         ss = ScreenshotTest(driver)
        
         
-        print("Hello Testing QA")
+        print("Hello Testing QA1")
        
         try:
             datestring = datetime.now().strftime("_%Y_%m_%d_%H%M.png")
